@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> UMKM Dapoer Pelangi</title>
+    <link rel="stylesheet" href="assets/style-index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Dapoer Pelangi</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="product.html">Product</a>
+            <i class='bx bxs-cart cart-icon'></i>
+            <span class="quantity">0</span>
+            <form action="pemesanan.html" method="post">
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <div class="cart-content">
+
+                    </div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rp.0</div>
+                    </div>
+                    <a class="btn-co" href="pemesanan.html" onclick="handleSubmit()">Lanjutkan Pemesanan</a>
+                    <i class="close-cart"><ion-icon name="close"></ion-icon></i>
+            </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article id="product" class="card-product"> <!----card product keseluruhan--->
+            <h2>Our Product</h2>
+            <div class="card-text">
+                <h2>Kue Basah dan Jajanan Pasar</h2>
+            </div>
+            <div class="card-kuebasah"><!---card untuk jenis kue basah--->
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/bolu-pelangi.png" class="product-img" id="bolu-pelangi">
+                    <div class="role-name">Bolu Pelangi</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Bolu Pelangi</h2>
+                            <p>Bolu Pelangi merupakan bolu yang sama pada umumnya, yang membedakan Bolu Pelangi ini
+                                dengan bolu lainnya adalah ukurannya.
+                                Bolu Pelangi ini memiliki ukuran segenggam tangan orang dewasa dan kemudian digulung
+                                dengan didalam gulungan tersebut terisi selai blueberry.
+                                Tidak hanya itu, Bolu Pelangi ini terdiri dari beberapa warna yang sama seperti pelangi.
+                                Warna tersebut berasal dari pewarna makanan yang baik untuk dikonsumsi baik untuk
+                                anak-anak ataupun orang dewasa.
+                                Bolu Pelangi ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/kue-soes.png" class="product-img" id="kue-soes">
+                    <div class="role-name">Kue Soes</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Kue Soes</h2>
+                            <p>Kue Soes ini merupakan kue soes yang sama pada umumnya, yang membedakan Kue Soes ini
+                                dengan Kue Soes ditempat lain adalah kulit kue soes yang asin dan isian fla yang rasanya
+                                yang sangat manis merupakan suatu kombinasi yang pas.
+                                Tidak hanya itu, Kue Soes ini juga diberikan sedikit perisa leci sehingga ketika
+                                konsumen memakan Kue Soes tersebut dapat merasakan sedikit rasa leci dan harumnya buah
+                                leci, sehingga untuk konsumen yang menyukai buah leci akan suka Kue Soes ini.
+                                Kue Soes ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian snackbox
+                                dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/talam-merah.png" class="product-img" id="talam-merah">
+                    <div class="role-name">Talam Lumpur</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Talam Lumpur</h2>
+                            <p>Talam Lumpur merupakan kue basah yang ditengahnya berisi fla yang terbuat dari santan
+                                dengan rasa manis gurih dan diberikan hiasan dari daun pandan.
+                                Pada kulit nya memiliki tekstur yang kenyal, sehingga cocok dengan fla yang lembut.
+                                Talam Lumpur ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/pie-buah.jpg" class="product-img" id="pie-buah">
+                    <div class="role-name">Pie Buah</div>
+                    <div class="role-price">Rp.3000/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Pie Buah</h2>
+                            <p>Pie buah merupakan kue basah yang terdiri dari kulit pie dan fla. Pada kulit pie memiliki
+                                rasa gurih asin dicampur dengan fla yang
+                                manis dengan perisa leci sehingga konsumen dapat merasakan wangi dan rasa leci pada Pie
+                                Buah kami. Tidak hanya itu, buah yang digunakan
+                                pada Pie Buah kami juga terjamin kesegarannya, untuk buah yang digunakan oleh Pie Buah
+                                kami ada Strawberry, Kiwi dan Jeruk. Namun, konsumen dapat
+                                merequest buah sesuai yang di inginkan. Pie Buah ini juga cocok untuk acara seperti
+                                arisan keluarga, pengajian, isian snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/bugis-mandi.png" class="product-img" id="bugis-mandi">
+                    <div class="role-name">Bugis Mandi</div>
+                    <div class="role-price">Rp.2000/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Bugis Mandi</h2>
+                            <p>Bugis Mandi merupakan kue basah yang terdiri dari kulit dan isiannya. Untuk kue Bugis
+                                Mandi ini, kulit berada didalam yang nantinya disiram fla.
+                                Untuk kulit nya memiliki tekstur yang kenyal dan dengan isian kelapa yang dicampur
+                                dengan gula merah sehingga terasa manis dan gurih disaat yang bersamaan.
+                                Untuk fla yang diluar memiliki rasa manis yang tidak terlalu light sehingga cocok antara
+                                perpaduan kulit dan fla pada kue tersebut. Tidak hanya itu,
+                                kue Bugis Mandi ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/talam-kentang.png" class="product-img" id="talam-kentang">
+                    <div class="role-name">Lumpur</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Lumpur Kentang</h2>
+                            <p>Lumpur Kentang ini merupakan kue basah yang bahan utamanya seperti namanya yaitu kentang,
+                                kue ini memiliki tesktur padat dengan rasa manis, diatas kue ini diberikan kismis
+                                untuk mempercantik tampilan. Talam Lumpur ini juga cocok untuk acara seperti arisan
+                                keluarga, pengajian, isian snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/sosis-gulung.png" class="product-img" id="sosis-gulung">
+                    <div class="role-name">Sosis Gulung</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Sosis Gulung</h2>
+                            <p>Sosis Gulung merupakan gorengan yang termasuk kedalam kue basah. Pada Sosis Gulung ini
+                                terdiri dari sosis yang kemudian dibalut
+                                dengan kulit lumpia. Tidak hanya itu, di dalam kulit lumpia tersebut diberikan sedikit
+                                saos sambal dan mayonais, sehingga konsumen dapat merasakan rasa pedas dari saos
+                                dan asam dari mayonais tersebut. Tidak hanya itu, Sosis Gulung ini juga cocok untuk
+                                acara seperti arisan keluarga, pengajian, isian snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/lemper-ayam.jpg" class="product-img" id="lemper-ayam">
+                    <div class="role-name">Lemper Ayam</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Lemper Ayam</h2>
+                            <p>Lemper Ayam merupakan kue basah yang terdiri dari ketan dan dengan isian ayam yang telah
+                                dibumbui, Lemper ayam kami berbeda dengan lemper ayam pada umumnya.
+                                Rasa pada isian ayam memiliki rasa ciri khas yang pas sehingga membedakan dengan lemper
+                                ayam yang lain. Tidak hanya itu, Lemper Ayam kami juga
+                                memiliki ukuran yang lebih besar sesuai dengan harga yang kami berikan, tidak seperti
+                                lemper ayam pada umumnya yang memiliki ukuran kecil.
+                                Lemper ayam ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/kroket-kntg.png" class="product-img" id="kroket-kntg">
+                    <div class="role-name">Kroket</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Kroket Kentang</h2>
+                            <p>Kroket Kentang merupakan gorengan yang juga kue basah. Kroket kentang ini terdiri dari
+                                kulit yang terbuat dari bahan utama yaitu kentang yang dihaluskan dan dengan
+                                isian yang terbuat dari wortel yang ditumis dengan bumbu sehingga menghasilkan rasa asin
+                                gurih. Tidak lupa cabe yang sangat cocok dengan gorengan dan juga sebagai hiasan
+                                Kroket kentang ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/curry-piff.png" class="product-img" id="curry-puff">
+                    <div class="role-name">Curry Puff</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Curry Puff</h2>
+                            <p>Curry Puff merupakan gorengan yang juga merupakan kue basah. Curry Puff memiliki kulit
+                                seperti pastry yaitu memiliki kulit yang berlapis-lapis dengan tekstur yang sedikit
+                                rentan.
+                                Curry Puff memiliki isian yang terdiri dari wortel dan kentang yang di bumbui dengan
+                                bumbu kari sehingga memiliki rasa yang gurih.
+                                Curry Puff ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian snackbox
+                                dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/bolu-pisang.png" class="product-img" id="bolu-pisang">
+                    <div class="role-name">Bolu Pisang</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Bolu Pisang</h2>
+                            <p>Bolu Pisang merupakan kue basah. Sesuai dengan namanya, Bolu Pisang ini berbahan dasar
+                                dari Buah Pisang yang dicampur dengan adonan bolu tersebut.
+                                Bolu Pisang ini juga cocok untuk acara seperti arisan keluarga, pengajian, isian
+                                snackbox dan masih banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-jenis-kue-basah">
+                    <img src="assets/nona-manis.png" class="product-img" id="nona-manis">
+                    <div class="role-name">Nona Manis</div>
+                    <div class="role-price">Rp.2500/pcs</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <h2>Nona Manis</h2>
+                            <p>Nona Manis merupakan kue basah yang memiliki bentuk seperti mangkok dengan tekstur yang
+                                kenyal. Pada kue Nona Manis memiliki
+                                isian ditengah yang memiliki tekstur sedikit cair namun agak padat yang terbuat dari
+                                santan sehingga menghasilkan rasa yang manis dan juga gurih.
+                                Pada hiasan di atasnya diberikan daun pandan untuk mempercantik tampilan. Nona manis ini
+                                juga cocok untuk acara seperti arisan keluarga, pengajian, isian snackbox dan masih
+                                banyak lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-text">
+                <h2>Aneka Kue Tampah</h2>
+            </div>
+            <div class="card-kue-tampah">
+                <div class="card-tipe-tampah">
+                    <div class="role-name">TIPE A</div>
+                    <img src="assets/tipe-e.png" class="product-img" id="tipe-a">
+                    <div class="role-price">Rp.150000/tampah</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <p>Kue Tampah merupakan percampuran dari berbagai jenis kue basah yang dibawahnya diberikan
+                                alas tampah sesuai dengan namanya.
+                                Untuk jenis kue pada kue tampah tipe ini terdiri dari beberapa jenis kue, seperti : <br>
+                                <li>Kue Ku</li>
+                                <li>Pie Brownies</li>
+                                <li>Talam Lumpur</li>
+                                <li>Lemper Ayam</li>
+                                <li>Kue Soes</li>
+                                <li>Bolu Pelangi</li>
+                                <li>Sosis Solo</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-tipe-tampah">
+                    <div class="role-name">TIPE B</div>
+                    <img src="assets/tipe-b.png" class="product-img" id="tipe-b">
+                    <div class="role-price">Rp.150000/tampah</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <p>Kue Tampah merupakan percampuran dari berbagai jenis kue basah yang dibawahnya diberikan
+                                alas tampah sesuai dengan namanya.
+                                Untuk jenis kue pada kue tampah tipe ini terdiri dari beberapa jenis kue, seperti : <br>
+                                <li>Pie Brownies</li>
+                                <li>Kroket Kentang</li>
+                                <li>Lemper Ayam</li>
+                                <li>Kue Soes</li>
+                                <li>Bolu Pelangi</li>
+                                <li>Sosis Solo</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-tipe-tampah">
+                    <div class="role-name">TIPE C</div>
+                    <img src="assets/tipe-c.png" class="product-img" id="tipe-c">
+                    <div class="role-price">Rp.150000/tampah</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <p>Kue Tampah merupakan percampuran dari berbagai jenis kue basah yang dibawahnya diberikan
+                                alas tampah sesuai dengan namanya.
+                                Untuk jenis kue pada kue tampah tipe ini terdiri dari beberapa jenis kue, seperti : <br>
+                                <li>Kue Ku</li>
+                                <li>Kue Soes</li>
+                                <li>Lemper Ayam</li>
+                                <li>Pie Brownies</li>
+                                <li>Bolu Pelangi</li>
+                                <li>Sosis Solo</li>
+                                <li>Pastel</li>
+                                <li>Bolu Pisang</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-tipe-tampah">
+                    <div class="role-name">TIPE D</div>
+                    <img src="assets/tipe-d.png" class="product-img" id="tipe-d">
+                    <div class="role-price">Rp.150000/tampah</div>
+                    <i class='bx bxs-cart-add cart-btn' style='color:#ffffff'  ></i>
+                    <a class="popup-btn">More</a>
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                        <div class="info">
+                            <p>Kue Tampah merupakan percampuran dari berbagai jenis kue basah yang dibawahnya diberikan
+                                alas tampah sesuai dengan namanya.
+                                Untuk jenis kue pada kue tampah tipe ini terdiri dari beberapa jenis kue, seperti : <br>
+                                <li>Kue Ku</li>
+                                <li>Kue Soes</li>
+                                <li>Lemper Ayam</li>
+                                <li>Pie Brownies</li>
+                                <li>Bolu Pelangi</li>
+                                <li>Pie Susu</li>
+                                <li>Pastel</li>
+                                <li>Bolu Brownies</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </article>
+        <footer>
+            <article id="footer" class="card-footer">
+                <div class="profile">
+                    <img src="assets/logo-daper-pelangi.png">
+                    <h6>UMKM Dapoer Pelangi</h6>
+                    <p>Jalan Rahwana III No.35 <br>
+                        Kelurahan Cibodas Baru, Kecamatan Cibodas <br>
+                        Tangerang, Banten 15138
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>Contact Us!</h2>
+                    <table align="center">
+                        <tr>
+                            <th><a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=santi.hot2@gmail.com"
+                                    target="_blank" alt="gmail"><span class="email"><ion-icon name="mail-outline"></ion-icon></a></span>
+                            </th>
+                            <th><a href="https://wa.me/6281280159600" target="_blank"><span class="whatsapp"><ion-icon
+                                            name="logo-whatsapp"></ion-icon></a></span></th>
+                            <th><a href="https://instagram.com/dapoerpelangi__" target="_blank"><span
+                                        class="instagram"><ion-icon name="logo-instagram"></ion-icon></a></span></th>
+                        </tr>
+                    </table>
+                </div>
+                <h4>2015 &#169; Dapoer Pelangi</h4>
+                </div>
+            </article>
+        </footer>
+    </main>
+</body>
+</main>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./product.js"></script>
+
+</html>

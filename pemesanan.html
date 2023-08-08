@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> UMKM Dapoer Pelangi</title>
+    <link rel="stylesheet" href="assets/style-pemesanan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Dapoer Pelangi</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="product.html">Product</a>
+        </nav>
+    </header>
+    <div class="form">
+        <form method="post" id="orderForm">
+            <h2>Form Pemesanan</h2>
+            <h6>Harap isi form pemesanan dengan benar</h6>
+            <div class="card-data-diri">
+                <h4>Informasi Data Diri</h4>
+                <div class="input-box">
+                    <label for="nama">Nama Pemesan</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="no_hp">No.HP</label>
+                    <input type="tel" id="no_hp" name="no_hp" required>
+                </div>
+            </div>
+            <div class="card-pemesanan">
+                <h4>Informasi Waktu Pemesanan</h4>
+                <div class="input-pemesanan">
+                    <label for="tgl_pesan">Tanggal Pemesanan</label>
+                    <input type="date" id="tgl_pesan" name="tgl_pesan" required>
+                </div>
+                <div class="input-pemesanan">
+                    <label for="wkt_pesan">Waktu Pemesanan</label>
+                    <input type="time" id="wkt_pesan" name="wkt_pesan" required>
+                </div>
+                <div class="input-pemesanan">
+                    <label for="alamat_pesan">Alamat Tujuan</label>
+                    <input type="textarea" id="alamat_pesan" name="alamat_pesan" required>
+                </div>
+            </div>
+            <div class="detail-pesanan" id="pesananContent">
+                <h4>Detail Pesanan Anda</h4>
+                <div class="pesanan-content">
+                    <div class="nama-product"></div>
+                    <div class="price-product"></div>
+
+                </div>
+            </div>
+    </div>
+    </div>
+    <button class="checkout" type="submit" name="submit">Pesan Sekarang</button>
+    </form>
+    <footer>
+        <article id="footer" class="card-footer">
+            <div class="profile">
+                <img src="assets/logo-daper-pelangi.png">
+                <h6>UMKM Dapoer Pelangi</h6>
+                <p>Jalan Rahwana III No.35 <br>
+                    Kelurahan Cibodas Baru, Kecamatan Cibodas <br>
+                    Tangerang, Banten 15138
+                </p>
+            </div>
+            <div class="contact">
+                <h2>Contact Us!</h2>
+                <table align="center">
+                    <tr>
+                        <th><a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=santi.hot2@gmail.com"
+                                target="_blank" alt="gmail"><span class="email"><ion-icon name="mail-outline"></ion-icon></a></span>
+                        </th>
+                        <th><a href="https://wa.me/6281280159600" target="_blank"><span class="whatsapp"><ion-icon
+                                        name="logo-whatsapp"></ion-icon></a></span></th>
+                        <th><a href="https://instagram.com/dapoerpelangi__" target="_blank"><span
+                                    class="instagram"><ion-icon name="logo-instagram"></ion-icon></a></span></th>
+                    </tr>
+                </table>
+            </div>
+            <h4>2015 &#169; Dapoer Pelangi</h4>
+            </div>
+        </article>
+    </footer>
+</body>
+<script src="./pemesanan.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function generateUniqueCode() {
+            var timestamp = Date.now();
+            var randomNum = Math.floor(Math.random() * 1000000);
+            var code = (timestamp.toString() + randomNum.toString()).slice(-6);
+
+            return code;
+        }
+
+        $("#orderForm").on('submit', function (event) {
+            // Mengambil nilai dari setiap input field
+            var nama = $("#nama").val();
+            var email = $("#email").val();
+            var no_hp = $("#no_hp").val();
+            var tgl_pesan = $("#tgl_pesan").val();
+            var wkt_pesan = $("#wkt_pesan").val();
+            var alamat_pesan = $("#alamat_pesan").val();
+            var kode = generateUniqueCode();
+
+            // Cek jika ada bidang yang kosong
+            if (!nama || !email || !no_hp || !tgl_pesan || !wkt_pesan || !alamat_pesan) {
+                alert("Semua bidang harus diisi!");
+                event.preventDefault(); // Mencegah form untuk submit
+                return;
+            }
+
+            var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+            var data = {
+                'nama': nama,
+                'email': email,
+                'no_hp': no_hp,
+                'tgl_pesan': tgl_pesan,
+                'wkt_pesan': wkt_pesan,
+                'alamat_pesan': alamat_pesan,
+                'kode': kode,
+                'cart': cart
+            };
+
+            $.ajax({
+                url: 'prosess.php',
+                type: 'post',
+                data: JSON.stringify(data),
+                contentType: 'application/json',
+                success: function (response) {
+                    // Clear cart in localstorage
+                    localStorage.removeItem('cart');
+                    // Show success message
+                    alert("Data anda telah tersimpan! Anda akan kembali ke tampilan awal");
+                    window.location.href = "index.html";
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+            event.preventDefault();
+        });
+    });
+</script>
+
+</html>
