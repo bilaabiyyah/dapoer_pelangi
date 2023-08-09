@@ -1,3 +1,4 @@
+runtime : php
 handlers:
 - url: /.*
 static_files: index.html
